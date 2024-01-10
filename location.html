@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>location</title>
+    <style>
+      
+      * {
+        visibility: visible;
+    border: border-box;
+}
+      
+      header {
+        height: 100%;
+        width: 100%;
+        right: 0;
+        top: 0;
+        overflow: auto;
+        position: fixed;
+        visibility: hidden;
+        z-index: 1009;
+      }
+      .box {
+        position: relative;
+        padding-left: 24px;
+        padding-right: 24px;
+        border-bottom-width: 0.8px;
+        background-color: #f0f2f2;
+        border-radius: 8px 8px 0 0;
+      }
+      .container {
+        position: absolute;
+        width: 375px;
+        height: 440px;
+        top: 131.5px;
+        bottom: 131.5px;
+        left: 550px;
+        right: 550px;
+        background-color: aliceblue;
+      }
+
+      .box h4 {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-inline-end: 28px;
+        margin-inline-start: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .box2 {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+        padding-right: 24px;
+        height: 303px;
+        width: 327px;
+      }
+      .box2 p {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #565959;
+      }
+      .btn {
+        padding: 1px 6px;
+        height: 29px;
+        width: 327px;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: rgba(255, 196, 0, 0.89);
+        border: 1px solid #888c8c;
+      }
+      h5 {
+        background-color: #fff;
+        color: #565959;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1;
+        padding: 0 8px 0 7px;
+        position: relative;
+        z-index: 2;
+      }
+      .a-divider.a-divider-break {
+        margin-top: 12px;
+        margin-bottom: 14px;
+        line-height: 0;
+        padding-top: 1px;
+        position: relative;
+        text-align: center;
+        top: 2px;
+      }
+
+      .a-divider.a-divider-break::after {
+        background-color: transparent;
+        border-top: 1px solid #bbbfbf;
+        content: "";
+        display: block;
+        height: 1px;
+        margin-top: -1px;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        width: 100%;
+      }
+      .text2 {
+        width: 198px;
+        height: 23px;
+        border-radius: 4px;
+        padding: 3px 7px;
+        border: 1px solid #888c8c;
+        box-shadow: 0 1px 2px rgba(15, 17, 17, 0.15) inset;
+        outline: 0;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      .btn2{
+        width: 101px;
+        height: 30px;
+        border-radius: 7px;
+        cursor: pointer;
+        background-color: rgba(255, 196, 0, 0.89);
+        border: 1px solid #888c8c;
+      }
+      .a-declarative{ 
+        width: 327px;
+        height: 29px;
+        border-radius: 6px;
+       } 
+      
+       .a-prompt{
+        font-size: 17px;
+       }
+
+       .footer{
+        padding: 8px 24px 24px 24px;
+        display: flex;
+        justify-content: center;
+        float: right;
+      }
+       .btn3{
+        width: 101px;
+        height: 30px;
+        border-radius: 7px;
+        cursor: pointer;
+        background-color: rgba(255, 196, 0, 0.89);
+        border: 1px solid #888c8c;
+       }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="box">
+          <h4>Choose your location</h4>
+        </div>
+        <div class="box2">
+          <p>
+            Delivery options and delivery speeds may vary for different
+            locations
+          </p>
+          <input
+            class="btn"
+            type="button"
+            value="Sign in to see your addresses"/>
+          <div class="a-divider a-divider-break">
+            <h5>or enter a US zip code</h5>
+          </div>
+          <div class="grid-container">
+            <div class="grid-item"><input class="text2" type="text" /></div>
+            <div class="grid-item"><input  class="btn2" type="button" value="Apply" /></div>
+          </div>
+          <div class="a-divider a-divider-break">
+            <h5>or</h5>
+          </div>
+          <div class="a-declarative">
+              <select class="a-declarative" id="GLUXCountryList" tabindex="0" aria-pressed="true">
+                <option class="a-prompt">Ship outside the US</option>
+              <optgroup>
+                <option value="AU" selected="selected">Australia</option>
+                <option value="CA">Canada</option>
+                <option value="CN">China</option>
+                <option value="JP">Japan</option>
+                <option value="MX">Mexico</option>
+                <option value="SG">Singapore</option>
+                <option value="GB">United Kingdom</option>
+              </select>
+              </optgroup>
+          </div>
+        </div>
+        <div class="footer">
+          <!-- <a href="https://www.google.com/maps/@30.4380174,-84.3038144,17z?entry=ttu" target="_blank" rel="noopener noreferrer"> -->
+            <input  class="btn3" type="button" value="Done"  id="Doneid" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <script>
+      $(document).ready(function(){
+        $('.btn3').click(function(){
+          const a = $('#Doneid').val();
+          alert(a);
+        });  
+      });
+    </script>
+  </body>
+</html>
