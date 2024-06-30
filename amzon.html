@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="Pictures/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Pictures/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Pictures/favicon-16x16.png"
+    />
+    <link rel="manifest" href="pic/site.webmanifest" />
+    <link rel="stylesheet" href="amazon.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="nav-logo border">
+          <div class="logo"></div>
+        </div>
+        <div class="nav-address border">
+          <p class="add-first">Deliver to</p>
+          <div class="add-icon">
+            <div class="location">
+              <a href="http://127.0.0.1:5500/location.html">
+                <i class="fa-solid fa-location-dot"></i
+              ></a>
+            </div>
+            <p class="add-second">India</p>
+          </div>
+        </div>
+        <!-- <div class="nav-address border">
+          <p class="add-first">Deliver to</p>
+          <div class="add-icon">
+            <div class="location">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <p class="add-second">India</p>
+          </div>
+        </div> -->
+        <div class="nav-search">
+          <select class="search-select">
+            <option value="All">All</option>
+          </select>
+
+          <input placeholder="Search Amazon" class="search-input" />
+
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <select class="lan border">
+          <option value="EN-india">EN</option>
+          <div class="narrow">
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+        </select>
+        <div class="nav-singin">
+          <p><span class="span">Hello, sing in</span></p>
+
+          <!-- <p class="nav-sec">Account & Lists</p> -->
+
+          <div class="dropdown">
+            <span>Account & Lists</span>
+            <i class="fa-solid fa-caret-down"></i>
+            <div class="dropdown-content">
+              <a
+                target="_blank"
+                href="http://127.0.0.1:5500/login.html"
+                style="text-decoration: none; color: white"
+                ><input class="btn" type="button" value="Sign in"
+              /></a>
+              <div class="new-container">
+                <p>New customer?<a href="#">Start here</a></p>
+              </div>
+              <div class="a-divider a-divider-break"></div>
+              <div class="dropdown-grid">
+                <div class="dropdown-item1">
+                  <ul>
+                    <p>Your Lists</p>
+                    <a href="">Create a List</a> 
+                    <a href="">Find a List or Registry</a>
+                    <ul> 
+                </div>
+                <div class="dropdown-item1">
+                  <ul>
+                  <p>Your Account</p>
+                  <a href="">Account</a>
+                  <a href="">Order</a>
+                  <a href="">Recommendations</a>
+                  <a href="">Watchlist</a>
+                  <a href="">Video Purchases & Rentals</a>
+                  <a href="">Kindle Unlimited</a>
+                  <a href="">Content & Devices</a>
+                  <ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-return border">
+          <p><span>Return</span></p>
+          <p class="nav-sec">& Order</p>
+        </div>
+
+        <div class="nav-cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Cart
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-all">
+          <i class="fa-solid fa-bars"></i>
+          All
+        </div>
+
+        <!-- panelops -->
+        <div class="panel-ops">
+          <select class="lan-india border">
+            <option value="EN"><p>Today's Deals</p></option>
+            <div class="narrow"></div>
+          </select>
+
+          <!-- <p>Customer Service</p> -->
+
+          <select class="lan-india border">
+            <option value="EN"><p>Customer Service</p></option>
+            <div class="narrow"></div>
+          </select>
+
+          <!-- <p>Registry</p> -->
+
+          <select class="lan-india border">
+            <option value="EN"><p>Registry</p></option>
+            <div class="narrow"></div>
+          </select>
+
+          <!--<p>Gift Cards</p>-->
+
+          <select class="lan-india border">
+            <option value="EN"><p>Gift Cards</p></option>
+            <div class="narrow"></div>
+          </select>
+
+          <!--  <p>Sell</p>  -->
+
+          <select class="lan-india border">
+            <option value="EN"><p>Sell</p></option>
+            <div class="narrow"></div>
+          </select>
+        </div>
+        <div class="panel-deals border">Shop deals in Electronics</div>
+      </div>
+    </header>
+
+    <!--<div class="hero-section">-->
+    <!-- carousel -->
+
+    <!--
+      <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Pictures/hero.2.jpg" class="d-block " alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="Pictures/hero.3.jpg" class="d-block " alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="Pictures/hero.4.jpg" class="d-block " alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> -->
+
+    <!-- <div class="carousel" data-flickity='{ "wrapAround": true }'>
+        <div class="carousel-cell">
+          <img src="Pictures/hero.2.jpg" alt="" >
+        </div>
+        <div class="carousel-cell">
+          <img src="Pictures/hero.3.jpg" alt="" />
+        </div>
+        <div class="carousel-cell">
+          <img src="Pictures/hero.4.jpg" alt="" />
+        </div>
+        <div class="carousel-cell">
+          <img src="Pictures/hero.5.jpg" alt="" />
+        </div>
+        <div class="carousel-cell">
+          <img src="Pictures/hero.6.jpg" alt="" />
+        </div>
+      </div>  -->
+    <div class="hero-section">
+      <div class="hero-msg">
+        <a href="https://www.amazon.in/?ref=aisgw_intl_stripe_in"></a>
+        <p>
+          You are on amazon.com. You can also shop on Amazon India for millions
+          of products with fast local delivery.
+          <a
+            href="https://www.amazon.in/?ref=aisgw_intl_stripe_in"
+            target="_blank"
+            >Click here to go to amazon.in</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!--forst line boxes-->
+
+    <div class="shop-section">
+      <div class="box1 box">
+        <div class="box-content">
+          <h2>Computer & Accessories</h2>
+          <div
+            class="box-img"
+            style="
+              background-image: url('Pictures/Computer\ &\ Accessories.jpg');
+            "
+          ></div>
+          <p>See More</p>
+        </div>
+      </div>
+
+      <div class="box2 box">
+        <div class="box-content">
+          <h2>Gaming accessories</h2>
+          <div
+            class="box-img"
+            style="background-image: url('Pictures/gaming.jpg')"
+          ></div>
+          <p>See More</p>
+        </div>
+      </div>
+
+      <div class="box3 box">
+        <div class="box-content">
+          <h2>Electronics</h2>
+          <div
+            class="box-img"
+            style="background-image: url('Pictures/box3.3.jpg')"
+          ></div>
+          <p>See More</p>
+        </div>
+      </div>
+
+      <div class="box4 box">
+        <div class="box-content">
+          <h2>For your Fitness Needs</h2>
+          <div
+            class="box-img"
+            style="background-image: url('Pictures/box4.4.jpg')"
+          ></div>
+          <p>See More</p>
+        </div>
+      </div>
+
+      <!--second line boxes-->
+
+      <div class="box1 box">
+        <div class="box-content">
+          <h2>Home refresh ideas</h2>
+          <div
+            class="box-img"
+            style="background-image: url('Pictures/Home\ refresh\ ideas.jpg')"
+          ></div>
+          <p>See More</p>
+        </div>
+      </div>
+
+      <div class="box2 box">
+        <div class="box-content">
+          <h2>Shop Laptops & Tablets</h2>
+          <div
+            class="box-img"
+            style="
+              background-image: url('Pictures/Shop\ Laptops\ &\ Tablets.jpg');
+            "
+          ></div>
+          <p>See More</p>
+        </div>
+      </div>
+
+      <div class="box3 box">
+        <div class="box-content">
+          <h2>Shop activity trackers and smartwatches</h2>
+          <div
+            class="box-img"
+            style="
+              background-image: url('Pictures/Shop\ activity\ trackers\ and\ smartwatches.jpg');
+            "
+          ></div>
+          <p>See More</p>
+        </div>
+      </div>
+      <div class="box4 box">
+        <div class="box-content">
+          <h2>New arrivals in Toys</h2>
+          <div
+            class="box-img"
+            style="background-image: url('Pictures/box7_image.jpg')"
+          ></div>
+          <p>See More</p>
+        </div>
+      </div>
+    </div>
+    <div class="top">
+      <a href="Pictures/up.jpg"></a>
+    </div>
+    <footer>
+      <div class="foot-panel1">Back to top</div>
+
+      <div class="foot-panel2">
+        <ul>
+          <p>Get to Know Us</p>
+          <a>Careers</a>
+          <a>Blog</a>
+          <a>About Amazon</a>
+          <a>Investor Relations</a>
+          <a>Amazon Science</a>
+        </ul>
+
+        <ul>
+          <p>Make Money with Us</p>
+          <a>Sell products on Amazon</a>
+          <a>Sell on Amazon Business</a>
+          <a>Sell apps on Amazon</a>
+          <a>IBecome an Affiliate</a>
+          <a>Advertise Your Products</a>
+          <a>Self-Publish with Us</a>
+          <a>Host an Amazon Hub</a>
+        </ul>
+
+        <ul>
+          <p>Amazon Payment Products</p>
+          <a>Amazon Business Card</a>
+          <a>Shop with Points</a>
+          <a>Reload Your Balance</a>
+          <a>Amazon Currency Converter</a>
+        </ul>
+
+        <ul>
+          <p>Let Us Help You</p>
+          <a>Amazon and COVID-19</a>
+          <a>Your Account</a>
+          <a>Your Orders</a>
+          <a>Shipping Rates & Policies</a>
+          <a>Returns & Replacements</a>
+          <a>Manage Your Content and Devices</a>
+          <a>Amazon Assistant</a>
+          <a>Help</a>
+        </ul>
+      </div>
+
+      <div class="foot-panel3">
+        <a href="http://127.0.0.1:5500/amzon.html"><div class="logo"></div></a>
+      </div>
+
+      <div class="foot-panel4">
+        <div class="pages">
+          <a>Conditon of use</a>
+          <a>Privacy Notice</a>
+          <a>Shipping Rates & Policies</a>
+          <a>Your Ads Privacy Choices</a>
+        </div>
+        <div class="copyright">
+          © 1996-2023, Amazon.com, Inc. or its affiliates
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
